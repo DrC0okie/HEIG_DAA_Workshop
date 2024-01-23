@@ -1,3 +1,5 @@
+package ch.heigvd.daa.workshop_ble
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -6,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ch.heigvd.daa.workshop_ble.BleDevice
 import ch.heigvd.daa.workshop_ble.R
 
-class LeDeviceListAdapter(private val devices: List<BleDevice>) : RecyclerView.Adapter<LeDeviceListAdapter.ViewHolder>() {
+class LeDeviceListAdapter(val devices: MutableList<BleDevice>) : RecyclerView.Adapter<LeDeviceListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val deviceName: TextView = view.findViewById(R.id.device_name)
