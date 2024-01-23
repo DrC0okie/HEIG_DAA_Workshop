@@ -123,7 +123,7 @@ Nous vous proposons une application de démo sur notre [repo Github](https://git
 
 
 <p align="center">
-  <img src="figures/app.jpeg" width="240" />
+  <img src="figures/app.jpeg" width="280" />
 </p>
 
 
