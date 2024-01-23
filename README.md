@@ -118,9 +118,9 @@ L'implémentation d'une communication BLE dans Android est complexe. Elle néces
 Nous vous proposons une application de démo sur notre [repo Github](https://github.com/DrC0okie/HEIG_DAA_Workshop), qui implémente uniquement la détection de devices BLE et la gestion des permissions. L'implémentation des 2 autres fonctionnalités nécessiterait plus de temps dans le cadre de ce travail.
 
 
-
-<img src="figures/app.jpeg" width="200" />
-
+<p align="center">
+  <img src="figures/app.jpeg" width="240" />
+</p>
 
 
 ### Permissions Bluetooth
