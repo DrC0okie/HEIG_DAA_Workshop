@@ -1,26 +1,28 @@
-package ch.heigvd.daa.workshop_ble
-
-import android.bluetooth.BluetoothDevice
+import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
+import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import ch.heigvd.daa.workshop_ble.BleDevice
+import ch.heigvd.daa.workshop_ble.R
 
-class LeDeviceListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val devices = mutableListOf<BluetoothDevice>()
+class LeDeviceListAdapter(private val devices: List<BleDevice>) : RecyclerView.Adapter<LeDeviceListAdapter.ViewHolder>() {
 
-    fun addDevice(device: BluetoothDevice) {
-        if (!devices.contains(device)) {
-            devices.add(device)
-            notifyItemInserted(devices.size - 1)
-        }
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val deviceName: TextView = view.findViewById(R.id.device_name)
+        val deviceAddress: TextView = view.findViewById(R.id.device_address)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        // Create your view holder here
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.device_list_item, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        // Bind the Bluetooth device to your view holder
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val device = devices[position]
+        holder.deviceName.text = device.name
+        holder.deviceAddress.text = device.address
     }
 
-    override fun getItemCount(): Int = devices.size
+    override fun getItemCount() = devices.size
 }
