@@ -89,8 +89,10 @@ Le Bluetooth Low Energy (BLE) et le Bluetooth classique représentent deux évol
 L'une des comparaisons majeures que l'on peut faire entre ces deux technologie est évidemment dans l'utilisation de l'énergie. Comme vu auparavant, le BLE est conçu pour limiter au maximum la consommation énergétique. C'est donc pour ça qu'il est autant adapté à l'IOT. A contrario, le bluetooth classique permettra d'effectuer d'autres actions qui nécessiterons plus d'énergie.
 
  
+<p align="center">
+  <img src="figures/Classic-Bluetooth-vs-BLE.png"/>
+</p>
 
-![](figures/Classic-Bluetooth-vs-BLE.png)
 
 [source](https://iotlab.tertiumcloud.com/2020/08/19/classic-bluetooth-vs-bluetooth-low-energy-ble/)
 
@@ -98,7 +100,9 @@ L'une des comparaisons majeures que l'on peut faire entre ces deux technologie e
 ### Applications:
 Comme vu auparavant, les applications de ces technologie sont donc bien différentes.
 
-![](figures/Bluetooth_comparison_table.png)
+<p align="center">
+  <img src="figures/Bluetooth_comparison_table.png"/>
+</p>
 
 [source](https://blog.nordicsemi.com/getconnected/the-difference-between-classic-bluetooth-and-bluetooth-low-energy)
 
