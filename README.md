@@ -101,7 +101,7 @@ L'une des comparaisons majeures que l'on peut faire entre ces deux technologie e
 Comme vu auparavant, les applications de ces technologie sont donc bien différentes.
 
 <p align="center">
-  <img src="figures/Bluetooth_comparison_table.png" width="50%"/>
+  <img src="figures/Bluetooth_comparison_table.png" width="80%"/>
 </p>
 
 [source](https://blog.nordicsemi.com/getconnected/the-difference-between-classic-bluetooth-and-bluetooth-low-energy)
