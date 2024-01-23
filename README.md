@@ -119,7 +119,7 @@ Nous vous proposons une application de démo sur notre [repo Github](https://git
 
 
 
-<img src="figures/app.jpeg" style="zoom:25%;" />
+<img src="figures/app.jpeg" width="200" />
 
 
 
