@@ -10,41 +10,26 @@
 
 ## Introduction (Tim)
 
-Brève explication de Bluetooth Low Energy. Comparaison avec le Bluetooth classique.
 
 
 
-## Historique (Léo)
-Anciennement connu sous le nom de Wibree, puis devenu la marque déposée Bluetooth Smart.
 
-Le Bluetooth Low Energy(BLE) est une technologie de transmission sans fil créée par Nokia en 2006.
+## Historique
+Au départ, le SIG a fait la promotion de Bluetooth LE en l'appelant "Bluetooth Smart" pour le distinguer de la version classique, qui utilisait le terme autonome "Bluetooth". L'expression "Bluetooth Smart ready" a également été utilisée pour représenter le Bluetooth bimode qui prendrait en charge les deux variantes.
 
-Cette technologie vise à répondre aux besoins croissants d'applications sans fil à faible consommation d'énergie.
-(Exemples: capteurs, montres connectée, dispositifs médicaux, domotique etc.)
+Cette technologie représente une avancée dans le domaine des technologies de transmission sans fil car il est conçu spécifiquement pour répondre aux applications wireless nécessitant une faible consommation d'énergie. Par exemple, les capteurs, les montres connectées, les dispositifs médicaux ou les systèmes de domotique.
 
-le Bluetooth Low Energy est omniprésent dans de nombreux dispositifs du quotidien. 
+Le Bluetooth Low Energy est capable d'établir une communication entre appareils tout en minimisant l'impact sur leur consommation. Cet avantage le rend adapté à dans les dispositifs IoT, où la gestion énergétique est très importante.
 
-Il permet de faciliter la communication entre les appareils de manière économe en énergie.
+## Concepts de base
 
-En conclusion, il joue donc un rôle central dans l'évolution de l'Internet des objets (IoT).
-
-## Concepts de base (Léo)
+La norme Bluetooth 4.1 - 5.2 publiée par SIG comprend à la fois Bluetooth Low Energy et Bluetooth classique. Lorsque vous développez des applications Bluetooth, vous devez donc savoir clairement quelle version utiliser, car elles fonctionnent différemment.
 
 ### GATT (Generic Attribute Profile)
 
-Le GATT (Generic Attribute Profile) est l'un des piliers fondamentaux du Bluetooth Low Energy (BLE). 
+Le GATT (Generic Attribute Profile) est l'un des piliers fondamentaux du Bluetooth Low Energy (BLE) car il permet de définir la manière dont les dispositifs communiquent et échangent des données. Le GATT repose sur un modèle client-serveur.
 
-Il permet de définir la manière dont les dispositifs communiquent et échangent des données. 
-
-Le GATT repose sur un modèle client-serveur:
-
-#### Client
-C'est un périphérique qui initie et contrôle les connexions avec le serveur. (Ex. smartphone)
-
-#### Serveur
-Le serveur contient des données regroupées sous le nom de services. 
-
-Chaque service contient des caractéristiques qui sont les informations pouvant être échangées.
+Le client est un périphérique qui initie et contrôle les connexions avec le serveur. (Ex. smartphone), tandis que le serveur contient des données regroupées sous le nom de `services`. Chaque service contient des caractéristiques qui sont les informations pouvant être échangées.
 
 ## Services
 
@@ -55,9 +40,7 @@ Par exemple:
 > Pour un dispositif de suivi d'activité physique. Il y aurait un service dédié à la surveillance du rythme cardiaque.
 
 
-Ils aident donc à organiser les données et fonctions de manière ordonnée. 
-
-Chaque conteneur possède un UUID(Identifiant Universel Unique) et peut contenir une ou plusieurs  caractéristiques à l'intérieur.
+Ils aident donc à organiser les données et fonctions de manière ordonnée.  Chaque conteneur possède un UUID (Identifiant Universel Unique) et peut contenir une ou plusieurs  caractéristiques à l'intérieur.
 
 ### Caractéristiques
 
@@ -70,7 +53,7 @@ Les caractéristiques représentent les données échangeables au sein d'un serv
 Les caractéristiques jouent un rôle crucial dans la définition des fonctionnalités offertes par un périphérique BLE.
 
 
-### Modes de fonctionnement du BLE : Central et Périphérique
+### Modes de fonctionnement du BLE
 #### Mode Central
 
 Dans le mode central, un dispositif joue le rôle de "centrale" et s'occupe d'initier la connexion avec un ou plusieurs périphériques. 
@@ -83,52 +66,29 @@ Ces derniers contrôlent et collectent des données à partir de périphériques
 
 #### Mode Périphérique
 
-Le mode périphérique correspond au rôle des dispositifs qui se rendent disponibles pour la connexion. 
+Le mode périphérique correspond au rôle des dispositifs qui se rendent disponibles pour la connexion. Ces dispositifs émettent des données ou fournissent des services à d'autres dispositifs BLE en mode ***central***. Les périphériques BLE sont par exemple:
 
-Ces dispositifs émettent des données ou fournissent des services à d'autres dispositifs BLE en mode ***central***.
-
-Les périphériques BLE sont par exemple:
 - des capteurs
 - des objets portables
 - Autres appareils émettant des données à des fins spécifiques.
 
-#### Les deux modes:
+
 
 Ensemble, ces deux modes permettent des interactions flexibles entre les dispositifs BLE.
 
-## BLE vs Bluetooth classic (Léo)
+## BLE vs Bluetooth classic
 
-Le Bluetooth Low Energy (BLE) et le Bluetooth classique représentent deux évolutions distinctes de la technologie sans fil Bluetooth, chacune adaptée à des besoins spécifiques.
-
-Nous allons donc comparer ces deux technologies sur quelques points pertinents:
+Le Bluetooth Low Energy (BLE) et le Bluetooth classique représentent deux évolutions distinctes de la technologie sans fil Bluetooth, chacune adaptée à des besoins spécifiques. Nous allons donc comparer ces deux technologies sur quelques points pertinents:
 
 ### Consommation d'énergie:
 
-L'une des comparaisons majeures que l'on peut faire entre ces deux technologie est évidemment dans l'utilisation de l'énergie.
+L'une des comparaisons majeures que l'on peut faire entre ces deux technologie est évidemment dans l'utilisation de l'énergie. Comme vu auparavant, le BLE est conçu pour limiter au maximum la consommation énergétique. C'est donc pour ça qu'il est autant adapté à l'IOT. A contrario, le bluetooth classique permettra d'effectuer d'autres actions qui nécessiterons plus d'énergie.
 
-Comme vu auparavant, le BLE est conçu pour limiter au maximum la consommation énergétique. C'est donc pour ça qu'il est autant adapté à l'IOT.
+### 
 
-A contrario, le bluetooth classique permettra d'effectuer d'autres actions qui nécessiterons plus d'énergie.
+![](figures/Classic-Bluetooth-vs-BLE.png)
 
-### Portée:
-
-**BLE:**
-- Offre une portée suffisante pour l'IOT ou domotique par exemple mais plus courte que le bluetooth classique
-- Cette portée plus courte s'explique par le fait qu'on essaie de limiter au maximum la consommation d'énergie
-
-**Bluetooth Classic:**
-- Offre une plus grande portée que le BLE
-- Utile pour des applications nécessitant des communications sur des plus longues distances
-
-
-### Débit de données:
-**BLE:**
-- Optimisé pour un débit de données plus bas, toujours en lien avec la consommation énergétique
-- Adaptés aux petites quantités de données transmises fréquemment
-
-**Bluetooth Classic:**
-- Permet un débit de données plus élevé
-- Adapté aux applications nécessitant le transfert rapide de volumes importants de données
+source: https://iotlab.tertiumcloud.com/2020/08/19/classic-bluetooth-vs-bluetooth-low-energy-ble/
 
 
 ### Applications:
@@ -138,6 +98,12 @@ Comme vu auparavant, les applications de ces technologie sont donc bien différe
 **Bluetooth Classic**: Haut-parleurs, casques, connexions entre smartphones et ordinateurs, etc.
 
 En conclusion, il n'y en un pas un qui serait "mieux" que l'autre, ils ont juste un objectif différent!
+
+
+
+![](C:\Users\timot\Documents\HEIG\DAA\HEIG_DAA_Workshop\figures\Bluetooth comparison table.png)
+
+source: https://blog.nordicsemi.com/getconnected/the-difference-between-classic-bluetooth-and-bluetooth-low-energy
 
 
 
@@ -151,6 +117,12 @@ L'implémentation d'une communication BLE dans Android est complexe. Elle néces
 4. Le transfert de données entre les devices
 
 Nous vous proposons une application de démo sur notre [repo Github](https://github.com/DrC0okie/HEIG_DAA_Workshop), qui implémente uniquement la détection de devices BLE et la gestion des permissions. L'implémentation des 2 autres fonctionnalités nécessiterait plus de temps dans le cadre de ce travail.
+
+
+
+<img src="figures/app.jpeg" style="zoom:25%;" />
+
+
 
 ### Permissions Bluetooth
 
@@ -364,149 +336,7 @@ override fun onRequestPermissionsResult(
 
 
 
-### Connexion à un server GATT ([doc](https://developer.android.com/develop/connectivity/bluetooth/ble/connect-gatt-server))
-
-Cette étape n'a pas été implémentée dans notre application par manque de temps, mais aussi, car nous ne disposions pas de devices BLE pour tester l'implémentation. La marche à suivre suivante est un résumé de la documentation officielle Android. Pour obtenir plus de détails concernant l'implémentation, veuillez vous référer à la documentation officielle.
-
-1. Pour se connecter à un serveur GATT sur un appareil BLE, il faut utiliser la méthode `connectGatt()` avec trois paramètres : un objet `Context`, un booléen `autoConnect` indiquant si la connexion doit être automatique, et une référence à un `BluetoothGattCallback`. Cette méthode retourne une instance de `BluetoothGatt`, utilisée pour les opérations du client GATT.
-
-```kotlin
-var bluetoothGatt: BluetoothGatt? = device.connectGatt(this, false, gattCallback)
-```
-
-2. Ensuite, il faut créer un `Service` (par exemple `BluetoothLeService`) pour interagir avec le device BLE via l'API BLE. Il faut utiliser `bindService()` pour lier l'activité au service. Le `Service` a besoin d'une implémentation de `Binder` pour fournir un accès au service.
-
-   ```kotlin
-   class BluetoothLeService : Service() {
-       private val binder = LocalBinder()
-       override fun onBind(intent: Intent): IBinder? {
-           return binder
-       }
-       inner class LocalBinder : Binder() {
-           fun getService() : BluetoothLeService {
-               return this@BluetoothLeService
-           }
-       }
-   }
-   ```
-
-   
-
-   L'activité peut démarrer le service à l'aide de `bindService()`, en transmettant un `Intent` pour démarrer le service, une implémentation `ServiceConnection` pour écouter les événements de connexion et de déconnexion, et un flag pour spécifier des options de connexion supplémentaires.
-
-   ```kotlin
-   class MainActivity : AppCompatActivity() {
-   
-       private var bluetoothService : BluetoothLeService? = null
-   
-       // Code to manage Service lifecycle.
-       private val serviceConnection: ServiceConnection = object : ServiceConnection {
-           override fun onServiceConnected(
-               componentName: ComponentName,
-               service: IBinder
-           ) {
-               bluetoothService = (service as LocalBinder).getService()
-               bluetoothService?.let { bluetooth ->
-                   // call functions on service to check connection and connect to devices
-               }
-           }
-           override fun onServiceDisconnected(componentName: ComponentName) {
-               bluetoothService = null
-           }
-       }
-   
-       override fun onCreate(savedInstanceState: Bundle?) {
-           super.onCreate(savedInstanceState)
-           val gattServiceIntent = Intent(this, BluetoothLeService::class.java)
-           bindService(gattServiceIntent, serviceConnection, Context.BIND_AUTO_CREATE)
-       }
-   }
-   
-   ```
-
-   
-
-3. Il faut ensuite s'assurer que le `BluetoothAdapter` est disponible sur l'appareil, car il est nécessaire pour interagir avec les appareils BLE. La méthode `initialize()` du service vérifie la disponibilité de l'adaptateur et retourne un booléen indiquant le succès.
-
-   ```kotlin
-   private const val TAG = "BluetoothLeService"
-   
-   class BluetoothLeService : Service() {
-   
-       private var bluetoothAdapter: BluetoothAdapter? = null
-   
-       fun initialize(): Boolean {
-           bluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
-           if (bluetoothAdapter == null) {
-               Log.e(TAG, "Unable to obtain a BluetoothAdapter.")
-               return false
-           }
-           return true
-       }
-       ...
-   }
-   ```
-
-
-L'activité appelle cette fonction dans son implémentation `ServiceConnection`. Le traitement d'une valeur de retour false de la fonction initialize() dépend de notre application. On peut afficher un message d'erreur indiquant à l'utilisateur que l'appareil actuel ne prend pas en charge l'opération Bluetooth ou désactiver toutes les fonctions qui nécessitent le Bluetooth pour fonctionner. Dans l'exemple suivant, la fonction finish() est appelée sur l'activité pour renvoyer l'utilisateur à l'écran précédent.
-
-   ```kotlin
-   class MainActivity : AppCompatActivity() {
-   
-       // Code to manage Service lifecycle.
-       private val serviceConnection: ServiceConnection = object : ServiceConnection {
-           override fun onServiceConnected(
-               componentName: ComponentName,
-               service: IBinder
-           ) {
-               bluetoothService = (service as LocalBinder).getService()
-               bluetoothService?.let { bluetooth ->
-                   if (!bluetooth.initialize()) {
-                       Log.e(TAG, "Unable to initialize Bluetooth")
-                       finish()
-                   }
-                   // perform device connection
-               }
-           }
-           override fun onServiceDisconnected(componentName: ComponentName) {
-               bluetoothService = null
-           }
-       }
-       ...
-   }
-   
-   ```
-
-4. Une fois que le service Bluetooth est initialisé, il peut se connecter à l'appareil. L'activité doit envoyer l'adresse de l'appareil au service pour qu'il puisse établir la connexion. Le service appellera d'abord `getRemoteDevice()` sur le `BluetoothAdapter` pour accéder au périphérique. Si l'adaptateur ne parvient pas à trouver un périphérique avec cette adresse, `getRemoteDevice()` lève une exception de type `IllegalArgumentException`.
-
-   ```kotlin
-   
-   fun connect(address: String): Boolean {
-       bluetoothAdapter?.let { adapter ->
-           try {
-               val device = adapter.getRemoteDevice(address)
-           } catch (exception: IllegalArgumentException) {
-               Log.w(TAG, "Device not found with provided address.")
-               return false
-           }
-       // connect to the GATT server on the device
-       } ?: run {
-           Log.w(TAG, "BluetoothAdapter not initialized")
-           return false
-       }
-   }
-   ```
-
-
-
-4. Pour recevoir des notifications sur l'état de la connexion, la découverte de service et d'autres événements GATT, il faut déclarer le  `BluetoothGattCallback`. Utiliser `onConnectionStateChange()` pour gérer les changements d'état de connexion.
-5. Ensuite, il faut utiliser `connectGatt()` pour se connecter au service GATT de l'appareil. Le service utilise `BluetoothGattCallback` pour la connexion.
-6. Le service doit informer l'activité des changements d'état. Pour ça, on utilise des broadcasts pour envoyer les informations du service à l'activité. L'activité doit donc implémenter un `BroadcastReceiver` pour recevoir et traiter les mises à jour de l'état de la connexion envoyées par le service.
-7. Finalement,  il faut fermer la connexion GATT lorsque celle-ci n'est plus nécessaire, en appelant `close()` sur l'objet `BluetoothGatt` pour éviter de consommer inutilement la batterie de l'appareil.
-
-
-
-## Conclusion (Tim)
+## Conclusion
 
 
 
@@ -516,4 +346,4 @@ L'activité appelle cette fonction dans son implémentation `ServiceConnection`.
 
 * [Documentation Android](https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview)
 
-* Nous avons utilisé Chat GPT pour améliorer la rédaction du rapport, mais pas pour écrire le fond
+* Nous avons utilisé Chat GPT pour générer la structure du rapport, ainsi que la correction de la syntaxe de certaines phrases.
