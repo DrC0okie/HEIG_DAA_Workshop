@@ -1,4 +1,4 @@
-# Travail théorique sur le Bluetooth Low Energy (DAA)
+# Travail théorique sur le Bluetooth Low Energy
 
 
 
@@ -8,9 +8,9 @@
 
 
 
-## Introduction (Tim)
+## Introduction
 
-
+L’objectif de ce travail consiste à étudier le Bluetooth Low Energy dans l’écosystème Android, la présentant en mettant en avant les fonctionnalité, comment est-ce qu’elle s’utilise et points d’attention à connaître. 
 
 
 
@@ -20,6 +20,8 @@ Au départ, le SIG a fait la promotion de Bluetooth LE en l'appelant "Bluetooth 
 Cette technologie représente une avancée dans le domaine des technologies de transmission sans fil car il est conçu spécifiquement pour répondre aux applications wireless nécessitant une faible consommation d'énergie. Par exemple, les capteurs, les montres connectées, les dispositifs médicaux ou les systèmes de domotique.
 
 Le Bluetooth Low Energy est capable d'établir une communication entre appareils tout en minimisant l'impact sur leur consommation. Cet avantage le rend adapté à dans les dispositifs IoT, où la gestion énergétique est très importante.
+
+
 
 ## Concepts de base
 
@@ -76,6 +78,8 @@ Le mode périphérique correspond au rôle des dispositifs qui se rendent dispon
 
 Ensemble, ces deux modes permettent des interactions flexibles entre les dispositifs BLE.
 
+
+
 ## BLE vs Bluetooth classic
 
 Le Bluetooth Low Energy (BLE) et le Bluetooth classique représentent deux évolutions distinctes de la technologie sans fil Bluetooth, chacune adaptée à des besoins spécifiques. Nous allons donc comparer ces deux technologies sur quelques points pertinents:
@@ -84,26 +88,21 @@ Le Bluetooth Low Energy (BLE) et le Bluetooth classique représentent deux évol
 
 L'une des comparaisons majeures que l'on peut faire entre ces deux technologie est évidemment dans l'utilisation de l'énergie. Comme vu auparavant, le BLE est conçu pour limiter au maximum la consommation énergétique. C'est donc pour ça qu'il est autant adapté à l'IOT. A contrario, le bluetooth classique permettra d'effectuer d'autres actions qui nécessiterons plus d'énergie.
 
-### 
+ 
 
 ![](figures/Classic-Bluetooth-vs-BLE.png)
 
-source: https://iotlab.tertiumcloud.com/2020/08/19/classic-bluetooth-vs-bluetooth-low-energy-ble/
+[source](https://iotlab.tertiumcloud.com/2020/08/19/classic-bluetooth-vs-bluetooth-low-energy-ble/)
 
 
 ### Applications:
 Comme vu auparavant, les applications de ces technologie sont donc bien différentes.
 
-**BLE**: IOT, Domotique, etc.
-**Bluetooth Classic**: Haut-parleurs, casques, connexions entre smartphones et ordinateurs, etc.
+![](figures/Bluetooth_comparison_table.png)
+
+[source](https://blog.nordicsemi.com/getconnected/the-difference-between-classic-bluetooth-and-bluetooth-low-energy)
 
 En conclusion, il n'y en un pas un qui serait "mieux" que l'autre, ils ont juste un objectif différent!
-
-
-
-![](C:\Users\timot\Documents\HEIG\DAA\HEIG_DAA_Workshop\figures\Bluetooth comparison table.png)
-
-source: https://blog.nordicsemi.com/getconnected/the-difference-between-classic-bluetooth-and-bluetooth-low-energy
 
 
 
@@ -338,7 +337,7 @@ override fun onRequestPermissionsResult(
 
 ## Conclusion
 
-
+La communication BLE dans Android nécessite une compréhension approfondie des interactions entre l'appareil et l'application, allant de la découverte initiale et la connexion à un appareil BLE, à la découverte des services et à la manipulation des caractéristiques pour une communication. L'implémentation n'est pas triviale à prendre en main et nécessite beaucoup de temps et de compréhension de la documentation officielle.
 
 
 
